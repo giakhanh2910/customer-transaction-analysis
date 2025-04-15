@@ -55,3 +55,22 @@ SELECT *,
          ROWS BETWEEN 3 PRECEDING AND CURRENT ROW
        ) AS avg_last_4_weeks
 FROM table_week;
+____
+# RFM Customer Segmentation (SQL)
+
+This query demonstrates an RFM (Recency, Frequency, Monetary) segmentation model using SQL on telecommunications transaction data.
+
+- *Recency*: How recently a customer made a transaction
+- *Frequency*: How often they made transactions
+- *Monetary*: How much money they spent
+
+# Key Steps:
+
+- Data preparation and filtering (Telco card transactions only)
+- Calculate RFM values per customer
+- Use PERCENT_RANK() to assign percentile ranks for scoring
+- Use CASE logic to convert percentiles to R/F/M tiers
+- Concatenate scores to assign final RFM score
+- Segment customers into groups like "Best Customers", "Loyal Customers", "Big Spenders" etc.
+
+This logic helps stakeholders better target customer campaigns.
