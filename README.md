@@ -24,7 +24,7 @@ This project showcases SQL-based data analysis performed on customer transaction
 
 # Sample Queries
 
-'''sql
+```sql
 -- Weekly billing activity with moving average
 WITH fact_table AS (
   SELECT transaction_id, transaction_time, scenario_id, customer_id
@@ -55,8 +55,8 @@ SELECT *,
          ROWS BETWEEN 3 PRECEDING AND CURRENT ROW
        ) AS avg_last_4_weeks
 FROM table_week;
-'''
-____
+```
+---
 # RFM Customer Segmentation (SQL)
 
 This query demonstrates an RFM (Recency, Frequency, Monetary) segmentation model using SQL on telecommunications transaction data.
